@@ -10,14 +10,32 @@ const api = axios.create({
   },
 });
 
+// Add token to requests if available
+api.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
 // Auth
 export const login = async (email: string, password: string) => {
   const response = await api.post('/api/auth/login', { email, password });
+  if (response.data.token) {
+    localStorage.setItem('token', response.data.token);
+  }
   return response.data;
 };
 
 export const logout = async () => {
   const response = await api.post('/api/auth/logout');
+  localStorage.removeItem('token');
   return response.data;
 };
 
