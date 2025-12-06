@@ -72,24 +72,24 @@ export default function SummaryCards({ data }: { data: SummaryData }) {
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 animate-fadeIn">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 animate-fadeIn">
       {cards.map((card, index) => (
         <div
           key={card.title}
-          className="bg-white overflow-hidden shadow-lg rounded-xl card-shadow-hover border border-gray-100"
+          className="bg-white overflow-hidden shadow-lg rounded-xl card-shadow-hover border border-gray-100 transform transition-transform hover:scale-105"
           style={{ animationDelay: `${index * 0.1}s` }}
         >
-          <div className="p-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className={`rounded-lg p-3 bg-gradient-to-br ${card.color} text-white shadow-md`}>
+          <div className="p-4 sm:p-6">
+            <div className="flex items-center justify-between mb-3 sm:mb-4">
+              <div className={`rounded-lg p-2 sm:p-3 bg-gradient-to-br ${card.color} text-white shadow-md`}>
                 {card.icon}
               </div>
             </div>
             <div>
-              <p className="text-sm font-medium text-gray-500 mb-1">
+              <p className="text-xs sm:text-sm font-medium text-gray-500 mb-1">
                 {card.title}
               </p>
-              <p className={`text-2xl font-bold ${card.textColor}`}>
+              <p className={`text-xl sm:text-2xl font-bold ${card.textColor} break-words`}>
                 {card.value}
               </p>
             </div>
