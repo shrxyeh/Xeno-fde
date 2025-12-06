@@ -1,0 +1,26 @@
+node_modules/
+.env
+.env.local
+.env.production.local
+dist/
+*.log
+.DS_Store
+coverage/
+
+# Backend
+backend/node_modules/
+backend/.env
+backend/dist/
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env
+frontend/.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
