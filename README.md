@@ -7,9 +7,6 @@ A full-stack B2B SaaS platform that provides Shopify merchants with analytics da
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
 - [Quick Start](#quick-start)
-- [API Endpoints](#api-endpoints)
-- [Database Schema](#database-schema)
-- [Deployment](#deployment)
 - [Key Features](#key-features)
 
 ---
