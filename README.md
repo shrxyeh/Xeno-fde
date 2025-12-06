@@ -39,6 +39,16 @@ Xeno allows multiple Shopify merchants to connect their stores and view analytic
 
 ## Quick Start
 
+### Live Demo
+
+**Deployed Application:** https://xeno-frontend-shreyash-637f0ecc3f8d.herokuapp.com/
+
+**Demo Credentials:**
+- Email: `admin@demo.com`
+- Password: `demo123`
+
+The deployed application includes pre-seeded data with 20 customers, 150+ orders, and analytics for demonstration purposes.
+
 ### Prerequisites
 
 - Node.js 18+
@@ -76,7 +86,13 @@ npm run dev
 
 ### Login with Demo Account
 
+**For Local Development:**
 Open `http://localhost:3000` and login with:
+- Email: `admin@demo.com`
+- Password: `demo123`
+
+**For Deployed Application:**
+Visit https://xeno-frontend-shreyash-637f0ecc3f8d.herokuapp.com/ and use the same credentials:
 - Email: `admin@demo.com`
 - Password: `demo123`
 
